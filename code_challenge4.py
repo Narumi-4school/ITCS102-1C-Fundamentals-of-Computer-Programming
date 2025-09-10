@@ -1,12 +1,38 @@
-print ("Konnichiwa, Welcome to 1Cmangareader.com")
-genre = input("Select genre (action/horror/romance): ")
-year = input("Select year (2000/2010): ")
-length = input("Select desired length (short/medium/long): ")
-genre_choice = genre
-year_choice = year
-length_choice = length
+# The key choices
+#action
+#2000
+#long
 
-if genre_choice == 'action' and year_choice == ' 2000' and length_choice == 'long':
-        print("Hi i would recommend you to read Naruto")
-else:  
-        print("Hello we dont have any manga thats",genre_choice year_choice length_choice,")
+
+
+
+print("Konnichiwa, Welcome to 1Cmangareader.com")
+print("Select your genre")
+print("1. Action")
+print("2. Horror")
+print("3. Romance")
+chosen_genre = input ("Enter selected genre (1/2/3): ")
+
+if chosen_genre == 1:
+ print("You chose Action, Great choice!")
+print("Select year range")
+print("1990")
+print("2000")
+print("2010")
+chosen_year = input("Select year (1990/2000/2010): ")
+if chosen_year == '2000':
+  print("You chose the year 2000 ")
+print("Choose your length")
+print("short")
+print("medium")
+print("long")
+chosen_length = input("Enter chosen length (1/2/3)")
+if chosen_length == 3:
+ print("You chose Long lengthed manga")
+print("I can recommend you to:")
+print("Fullmetal Alchemist")
+print("Gantz")
+print("Air Gear")
+print("Eyeshield 21")
+
+ 
