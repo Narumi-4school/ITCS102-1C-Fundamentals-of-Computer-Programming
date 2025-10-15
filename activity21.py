@@ -16,3 +16,5 @@ while tuloy == True:
     else:
         print("Mali ang hula mo boi")
         continue
+
+print(f" Hi, you guess is correct. The number of tries {tries}")
