@@ -86,6 +86,12 @@ while True:
             print("TRY USING PRINT FUNCTION.")
             print("+------------------------------------+")
             try_print()
+            clear_sc('any_key')
+            show_menu()
+            
+        elif user_choice == '3':
+            clear_sc('any_key')
+            show_menu()
             continue
 
     elif choice == '2':
@@ -201,6 +207,7 @@ while True:
             type_writer("FOR LOOPS")
             type_writer("\nFor loops consists of many parts but let's start on the basics..")
             type_writer("First you need to create a structure")
-            type_writer("Example: \nfor variable in  sequence(start, stop, step/s)")
+            type_writer("Example: \nfor variable in  sequence(start, stop, step/s) # Basic structure of a for loop")
+            type_writer("Let's take this one as an example: \n for i in range(1, 5, 1): \n\tprint(i) # Prints the number of sequence
             pass
 
