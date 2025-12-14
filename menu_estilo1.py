@@ -864,7 +864,7 @@ SUMMARY
             continue
             
                     
-    elif choice == '10':
+    elif choice == 'x':
         type_writer("THANK YOU FOR USING MY SYSTEM. COMEBACK AGAIN!......")
         break
     else:
@@ -882,4 +882,5 @@ SUMMARY
 
 
             
+
 
