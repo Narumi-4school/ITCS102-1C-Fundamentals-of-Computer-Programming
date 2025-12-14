@@ -16,7 +16,8 @@ def conditional_stat(val):
         print("You are an adult")
     else:     
         print("You are still a minor")    
-
+def Fl_Triangle():
+    
 def clear_sc(any_key):
     any_key = input("Press any key to exit... ")
     os.system('cls')
@@ -130,7 +131,7 @@ while True:
          print("\nKEY POINT:")
          print("You can use the += for incrementation to improve code effiency by adding a value to a variable and updates it at the same time!")
          print("Example:")
-         print("x = 5 \nx += 5 \# adds and updates the variable \nprint(x) \n10")
+         print("x = 5 \nx += 5 # adds and updates the variable \nprint(x) \n10")
          clear_sc('any_key')
          show_menu()
          continue
@@ -251,9 +252,35 @@ while True:
                 if i % 2 == 0:
                    print(i, "is even")
             type_writer("\nNote that every basic function in python is fundamental in learning the whole language...")
-        clear_sc('any_key')
-        show_menu()
-        continue
+            clear_sc('any_key')
+            show_menu()
+            continue
+        elif user_choice2 == '2':
+            type_writer("\nExplore different for loops.")
+            type_writer("\n Choose from the choices below:")
+            print("+----------------------------------------+")
+            print("1. Triangle * for loop")
+            print("2. List Iteration")
+            print("3. Loop with math")
+            print("4. Value checker")
+            print("5. Exit")
+            print()
+            user_choice3 = input("Enter choice --> ")
+            
+            if user_choice3 == '1':
+                
+            
+            
+            
+            pass
+            
+            
+    
+        
+        
+        
+        
+            
         
             
             
