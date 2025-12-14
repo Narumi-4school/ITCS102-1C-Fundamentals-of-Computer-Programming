@@ -220,6 +220,51 @@ while True:
             for fruit in fruits:
                 print(fruit)
             type_writer("\nLooping using arithmetic")
+            type_writer("\n Let's take this as an example.")
+            type_writer("\n number = 0 # Create a empty variable for incrementation")
+            type_writer("\n for i in range(1,6): \n\tnumber += i # Increment")
+            type_writer("\nOutput:")
+            
+            number = 0
+            for i in range(1,6):
+                number += i
+                print(number)
+            # Using end="" to loop in the same line
+            type_writer("\nPrinting list on the same line/horizontally")
+            type_writer("\nBy using this keyword ('end=""'), it prints the loop in the same line")
+            type_writer("\nExample:")
+            type_writer("\n for i in range(1,6): \n\tprint(i,end=\" \")# Input space inside the keyword to add space each item")
+            type_writer("\nprint() # To start a new line instead of the cursor appearing at the end of loop")
+            type_writer(" print() # Add to the end of loop to start a new line")
+            type_writer("\nOutput:")
+            print()
+            for i in range(1,6):
+                print(i,end=" ")
+            print()
+            
+            type_writer("\nLooping with if statement:")
+            type_writer("\nYou can use other functions on for loops such as the previous ones and also conditional statements...")
+            type_writer("\nfor i in range(1,11): \n\tif i % 2 == 0: \n\tprint(i,'is even')")
+            type_writer("\nOutput:")
+            print()
+            for i in range(1, 11):
+                if i % 2 == 0:
+                   print(i, "is even")
+            type_writer("\nNote that every basic function in python is fundamental in learning the whole language...")
+        clear_sc('any_key')
+        show_menu()
+        continue
+        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
 
