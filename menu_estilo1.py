@@ -1,6 +1,8 @@
 # Welcome to my Python Functions Compiler Program
 import os
 import time
+import io
+import sys
 
 def type_writer(text, speed=0.016):
     for char in text:
@@ -188,12 +190,17 @@ while True:
             if a == 'y':
                 print("def conditional_stat(val):\n\tage = val # gets the value from the def function \nif age >= 18: #checks if age is greater than or equal to 18 \n\tprint('You are an adult') # Prints if True \nelse: \n\tprint('You are still a minor') # Prints if false")
                 continue
-            else:
-                print("Okay! Thank you for using this system.")
-                break
-        clear_sc('any_key')
-        show_menu()    
-        continue
+        elif user_choice1 == '3':
+            print("You are directed to the main menu..")
+            clear_sc('any_key')
+            show_menu()
+            continue
+        else:
+            
+            print("Okay! Thank you for using this system.")
+            clear_sc('any_key')
+            show_menu()    
+            continue
 
     elif choice == '6':
         print("+---------------------------")
@@ -265,8 +272,7 @@ while True:
             print("1. Triangle * for loop")
             print("2. List Iteration")
             print("3. For Loop with math")
-            print("4. Value checker")
-            print("5. Exit")
+            print("4. Exit")
             print()
             user_choice3 = input("Enter choice --> ")
 
@@ -283,9 +289,6 @@ while True:
                     clear_sc('any_key')
                     show_menu()
                     continue
-                else:
-                    print("Thank you for using the system.. ")
-                    break
                     
 
             elif user_choice3 == '2':
@@ -320,9 +323,7 @@ for items in e_list:
                 ex = input("Do you want to continue to other loops?--> (y/n)").lower()
                 if ex == 'y':
                     continue
-                else:
-                    show_menu()
-                    continue
+        
 
             elif user_choice3 == '3':
                 # Merged Arithmetic For Loops with code display
@@ -404,14 +405,26 @@ print(f"Final result: {result}")"""
                         print(code_div)
 
                     elif op_choice == '5':
+                        clear_sc('any_key')
                         show_menu()
                         continue
-
                     else:
-                        print("Invalid choice. Please try again.")
-
+                        print("Invalid Choice.")
+                        clear_sc('any_key')
+                        show_menu()
                         continue
+            elif user_choice3 == '4':
+                print("You are directed to the main menu..")
+                clear_sc('any_key')
+                show_menu()
+                continue
+
+        else:
+            print("Invalid choice. Please try again.")
+
+            continue
     elif choice == '7':
+        print("+------------------------------------+")
         print("INTRODUCTION TO WHILE LOOP")
         print("+------------------------------------+")
         
@@ -476,7 +489,7 @@ print(f"Final result: {result}")"""
                 type_writer("Stopping the loop with 'break'")
                 break  # stop the loop completely
 
-        type_writer("Press Enter if you want to try typing your own Python code!")
+        type_writer("Press Enter if you want to try typing your own While loop code!")
         code_use = input()
 
         if code_use == "":  # user just pressed Enter
@@ -487,19 +500,386 @@ print(f"Final result: {result}")"""
                 line = input()
                 if line.strip().upper() == "END":
                     break
-            user_code += line + "\n"
+                user_code += line + "\n"
     
             type_writer("\nRunning your code...")
             exec(user_code)
+            clear_sc('any_key')
+            show_menu()
+            continue
 
 
         else:
             type_writer("You chose not to type code. Returning to menu...")
 
             type_writer("\nThe loop is now finished!")
+            continue
+    elif choice == '8':
+            print("+------------------------------------+")
+            print("INTRODUCTION TO LIST AND DICTIONARY")
+            print("+------------------------------------+")
+            lst = input("Type 'list' to print List lesson. Type 'dict' to print Dictionary lesson. Type any key to exit --> ")
+
+            if lst == 'list':
+                type_writer("Now what is a List?....")
+                time.sleep(0.9)
+                type_writer("A list is a collection of items in one variable.")
+                type_writer("List can store different type of data in one variable.")
+                type_writer("A list can hold: ")
+                type_writer("\nNumbers(integer) \nTexts(string) \nBooleans(True and False) \nand other lists")
+                type_writer("\nBasic example:")
+                print()
+                type1 = """fruits = ["apple", "banana", "orange"]
+scores = [10, 20, 30]
+mixed = [1, "hello", True]"""
+                type_writer(type1)
+                type_writer("\nNow let's try to print the values inside those lists")
+                type2 = """fruits = ["apple", "banana", "orange"]
+scores = [10, 20 ,30]
+mixed = [1, "hello", True]
+print(fruits[0])  # apple
+print(scores[1])  # 20
+print(mixed[2])  # True(Bool)"""
+                type_writer(type2)
+                type_writer("We are only in the print function of list. ")
+                proc = ("Press enter to print the different functions in list: ")
+                print("Function \t\t|\t\tKeyword \t\t|\t\tExample \t\t| \t\tOutput")
+                print("--------------------------------------------------------------------------------------------------------------------------------------------")
+                print("Append \t\t\t\t\tappend() \t\t\t\tlist.append(item) \t\tAdds the selected item \n\t\t\t\t\t\t\t\t\t\t\t\t\t\tinto list at last index")
+                print("Insert \t\t\t\t\tinsert() \t\t\t\tlist.insert(1, 99) \t\tInserts item with selected \n\t\t\t\t\t\t\t\t\t\t\t\t\t\tindex")
+                print("Remove \t\t\t\t\tremove() \t\t\t\tlist.remove() \t\t\tRemove an item by calling \n\t\t\t\t\t\t\t\t\t\t\t\t\t\tit's value")
+                print("Pop \t\t\t\t\tpop.() \t\t\t\t\tlist.pop(0) \t\t\tRemoves an item by index")
+                print("Clear \t\t\t\t\tclear() \t\t\t\tlist.clear() \t\t\tRemoves all items")
+                print("Index \t\t\t\t\tindex() \t\t\t\tlist.index(1) \t\t\tCalls item by index")
+                print("Sort \t\t\t\t\tsort() \t\t\t\t\tlist.sort() \t\t\tSort the list")
+                print("Reverse \t\t\t\treverse() \t\t\t\tlist.reverse() \t\t\tReverse the order")
+                print("len \t\t\t\t\tlen() \t\t\t\t\tlen(list) \t\t\tPrints number of items")
+                list_functions_demo = """
+PYTHON LIST FUNCTIONS (EXAMPLE):
+
+nums = [1, 2, 3]
+print("Start:", nums)
+
+# 1. append() - add item to end
+nums.append(4)
+print("append(4):", nums)
+
+# 2. insert() - add item at index
+nums.insert(1, 99)
+print("insert(1, 99):", nums)
+
+# 3. extend() - add multiple items
+nums.extend([5, 6])
+print("extend([5, 6]):", nums)
+
+# 4. remove() - remove by value
+nums.remove(2)
+print("remove(2):", nums)
+
+# 5. pop() - remove last item
+nums.pop()
+print("pop():", nums)
+
+# pop by index
+nums.pop(0)
+print("pop(0):", nums)
+
+# 6. clear() - remove all items
+temp = nums.copy()
+temp.clear()
+print("clear():", temp)
+
+# 7. index() - find index of item
+nums.append(10)
+print("index(10):", nums.index(10))
+
+# 8. len() - counts items
+The len() function returns the number of items in a list.
+
+nums = [10, 20, 30, 40]
+print(len(nums))
+
+# Output:
+# 4
+
+# 9. sort() - sort list
+nums.sort()
+print("sort():", nums)
+
+# 10. reverse() - reverse list
+nums.reverse()
+print("reverse():", nums)
+"""
+
+                print(list_functions_demo)
+                clear_sc('any_key')
+                show_menu()
+                continue
+            elif lst == 'dict':
+                type_writer("Now what is a Dictionary?....")
+                time.sleep(0.9)
+                type_writer("\nA dictionary is a collection of key-value pairs.\nEach key is used to access its corresponding value. Dictionaries are written using curly braces {}.")
+                type_writer("\nNow dictionary differs from list because every value is accompanied by a key or keynames")
+                notes = """IMPORTANT NOTES:
+
+- Keys must be unique
+- Keys are usually strings or numbers
+- Values can be any data type
+- Dictionaries are mutable (can be changed)"""
+                type_writer(notes)
+
+                notes2 = """COMMON FUNCTIONS
+
+len(student)        # number of key-value pairs
+student.keys()      # returns all keys
+student.values()    # returns all values
+student.items()     # returns key-value pairs
+
++-----------------------------------------------+
+
+KEY POINTS IN USING DICTIONARY
+
+- Dictionaries store data as key : value
+- Use {} to create them
+- Access values using keys
+- Use .get() for safe access"""
+                print()
+                type_writer(notes2)
+                clear_sc('any_key')
+                show_menu()
+                continue
+            else:
+                print("Invalid Choice.")
+                clear_sc('any_key')
+                show_menu()
+                continue
+    elif choice == '9':
+        print("-------------------------------------------------------------------------------")
+        print("DEF FUNCTIONS AND PRACTICE CODE EXECUTOR")
+        print("-------------------------------------------------------------------------------")
+        print("Choose an action from below:")
+        print("1. Introduction to Def(User defined functions)")
+        print("2. Enter Code Executor")
+        print("3. Exit")
+
+        user_choice4 = input("Enter choice: ")
+
+        if user_choice4 == '1':
+            def_function = """
+PYTHON USER-DEFINED FUNCTIONS (def)
+
+A function is a reusable block of code that performs a specific task.
+User-defined functions are created using the 'def' keyword.
+
+Functions help you:
+- Reuse code
+- Organize programs
+- Avoid repetition
+
+--------------------------------------------------
+
+BASIC FUNCTION SYNTAX (ANATOMY)
+
+def function_name(parameters):
+    code to run
+    return value (optional)
+
+--------------------------------------------------
+
+SIMPLE EXAMPLE (NO PARAMETERS)
+
+def greet():
+    print("Hello!")
+
+greet()
+
+Output:
+Hello!
+
+--------------------------------------------------
+
+FUNCTION WITH PARAMETERS
+
+def greet(name):
+    print("Hello", name)
+
+greet("Alex")
+
+Output:
+Hello Alex
+
+--------------------------------------------------
+
+FUNCTION WITH MULTIPLE PARAMETERS
+
+def add(a, b):
+    print(a + b)
+
+add(5, 3)
+
+Output:
+8
+
+--------------------------------------------------
+
+RETURNING A VALUE
+
+def multiply(a, b):
+    return a * b
+
+result = multiply(4, 5)
+print(result)
+
+Output:
+20
+
+--------------------------------------------------
+
+RETURN VS PRINT
+
+print() shows a value to the screen.
+return sends a value back to where the function was called.
+
+--------------------------------------------------
+
+DEFAULT PARAMETERS
+
+def greet(name="User"):
+    print("Hello", name)
+
+greet()
+greet("Sam")
+
+--------------------------------------------------
+
+FUNCTION WITH LOGIC
+
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False
+
+print(is_even(4))
+print(is_even(7))
+
+--------------------------------------------------
+
+CALLING A FUNCTION
+
+You run a function by writing its name followed by parentheses.
+
+function_name()
+
+--------------------------------------------------
+
+IMPORTANT RULES
+
+- Function names should be lowercase
+- Use underscores for readability
+- Code inside a function must be indented
+- A function must be defined before it is called
+
+--------------------------------------------------
+
+SUMMARY
+
+- Use 'def' to create functions
+- Functions can take parameters
+- Functions can return values
+- Functions help keep code clean and reusable
+"""
+            print(def_function)
+            print()
+            inp = input("Press enter to try creating you own Python Function!. Type 'END' on a new line when finished:")
+
+            if inp == "":
+                print("Type your Python function. Type 'END' on a new line when finished:")
+
+            user_code = ""
+            while True:
+                line = input()
+                if line.strip().upper() == "END":
+                    break
+                user_code += line + "\n"
+
+            # Define the function in the current namespace
+            exec(user_code)
+
+            # Ask the user which function to run
+            func_call = input("Type the function call (e.g., greet()): ")
+            try:
+                result = eval(func_call)
+                if result is not None:
+                    print("Output:", result)
+            except Exception as e:
+                print("Error:", e)
+                continue
+            else:
+                print("You have been directed back to main menu")
+                clear_sc('any_key')
+                show_menu()
+                continue
+        elif user_choice4 == '2':
+           while True:
+                print("Press Enter if you want to try typing your own Python code!")
+                print("Or type 'EXIT' to quit.")
+                code_use = input()
+
+                if code_use.strip().upper() == "EXIT":
+                    print("Goodbye!")
+                    clear_sc('any_key')
+                    show_menu()
+                    continue
+                    
+
+                if code_use == "":  # user pressed Enter
+                    print("Great! Type your code below. Type 'END' when finished:")
+
+                    user_code = ""
+                    while True:
+                        line = input()
+                        if line.strip().upper() == "END":
+                            break
+                        user_code += line + "\n"
+
+                    print("\nRunning your code...\n")
+                    try:
+                        exec(user_code)
+                    except Exception as e:
+                        print("Error while running your code:", e)
+
+                    input("\nPress Enter to continue...")  # wait before looping again
+        elif user_choice4 == '3':
+            
+                print("You are directed to the main menu..")
+                clear_sc('any_key')
+                show_menu()
+                continue
+        else:
+        
+            print("You are directed to the main menu..")
             clear_sc('any_key')
             show_menu()
             continue
             
+                    
+    elif choice == '10':
+        type_writer("THANK YOU FOR USING MY SYSTEM. COMEBACK AGAIN!......")
+        break
+    else:
+        type_writer("INVALID CHOICE.")
+        clear_sc('any_key')
+        show_menu()
+        continue
+
+                        
+
         
+       
+        
+
+
+
+            
 
