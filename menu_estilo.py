@@ -102,7 +102,7 @@ while True:
         print("\\t \t\t\t\t\tTab space(indent) \t\t\tprint('Hello\\tWorld') \t\t\tHello\tWorld")
         print("\\ \t\t\t\t\tBackSlash \t\t\t\tprint('This is a back slash \\\')   This is a backslash \\")
         print("\\' \t\t\t\t\tSingle Quote \t\t\t\tprint('It\\'s Python') \t\t\tIt's Python")
-        print("\\\" \t\t\t\t\tDouble Quote \t\t\t\tprint(\"I said \\\"Hi\\\"\") \t\t\t('print(\"I said \\"Hi\\"")')
+        print("\\\" \t\t\t\t\tDouble Quote \t\t\t\tprint(\"I said \\\"Hi\\\"\") \t\t\t('print(\"I said \"Hi\"")')
         print("\\r \t\t\t\t\tCarriage return(start of line) \t\tprint('Hello\\rWorld') \t\t\tWorld")
         print("\\b \t\t\t\t\tBack Space \t\t\t\tprint('Hello\\bWorld') \t\t\tHellWorld")
         print("\nKEY POINTS:")
