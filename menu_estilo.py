@@ -208,6 +208,18 @@ while True:
             type_writer("\nFor loops consists of many parts but let's start on the basics..")
             type_writer("First you need to create a structure")
             type_writer("Example: \nfor variable in  sequence(start, stop, step/s) # Basic structure of a for loop")
-            type_writer("Let's take this one as an example: \n for i in range(1, 5, 1): \n\tprint(i) # Prints the number of sequence
-            pass
+            type_writer("Let's take this one as an example: \n for i in range(1, 5, 1): \n\tprint(i) # Prints the number of sequence")
+            type_writer("Output:\n1\n2\n3\n4")
+            type_writer("\nLooping through a list:")
+            type_writer("\n fruits = ['apple','banana','mango']")
+            type_writer("\n for fruit in fruits: \n\tprint(fruit) # Iterates the list through a  loop")
+            type_writer("\nOuput:")
+            
+            fruits = ["apple","banana","mango"]
+            
+            for fruit in fruits:
+                print(fruit)
+            type_writer("\nLooping using arithmetic")
+            
+            
 
