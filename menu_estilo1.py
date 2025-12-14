@@ -497,6 +497,9 @@ print(f"Final result: {result}")"""
             type_writer("You chose not to type code. Returning to menu...")
 
             type_writer("\nThe loop is now finished!")
-
+            clear_sc('any_key')
+            show_menu()
+            continue
+            
         
 
