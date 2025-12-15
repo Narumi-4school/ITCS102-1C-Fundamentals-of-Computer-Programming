@@ -1,8 +1,6 @@
 # Welcome to my Python Functions Compiler Program
 import os
 import time
-import io
-import sys
 
 def type_writer(text, speed=0.016):
     for char in text:
@@ -46,7 +44,7 @@ def show_menu():
     print("WELCOME TO My PYTHON COMPILER SYSTEM")
     print("+------------------------------------+")
     name = input("What is your name? .....  ").upper()
-    print(f"Hello {name}, "Choose an action from 1 - 9: ")
+    print(f"Hello {name}, Choose an action from 1 - 9")
     print("1. Print function")
     print("2. View python sequences")
     print("3. Arithmetic assignations and functions")
@@ -102,7 +100,7 @@ while True:
     elif choice == '2':
         type_writer("DIFFERENT PYTHON SEQUENCES IN PYTHON")
         print("Escape Sequence \t\t|\t\tDefinition \t\t|\t\tExample \t\t| \t\tOutput")
-        print("----------------------------------------------------------------------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------------------------------------------------------------------------------")
         print("\\n \t\t\t\t\tNew Line \t\t\t\tprint('\\nHellowWorld') \t\t\tA\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tB")
         print("\\t \t\t\t\t\tTab space(indent) \t\t\tprint('Hello\\tWorld') \t\t\tHello\tWorld")
         print("\\ \t\t\t\t\tBackSlash \t\t\t\tprint('This is a back slash \\\')   This is a backslash \\")
@@ -125,7 +123,7 @@ while True:
     elif choice == '3':
         print("ARITHMETIC OPERATORS AND FUNCTIONS")
         print("Operator \t\t|\t\tSign \t\t|\t\tExample \t\t| \t\tOutput")
-        print("--------------------------------------------------------------------------------------------------------------------------------------------")
+        print("------------------------------------------------------------------------------------------------------------------------------------")
         print("Addition \t\t\t\t+ \t\t\t\t5 + 3 \t\t\t\t\t8")
         print("Subtraction \t\t\t\t- \t\t\t\t5 - 3 \t\t\t\t\t2")
         print("Multiplication \t\t\t\t* \t\t\t\t5 * 3 \t\t\t\t\t15")
@@ -189,6 +187,8 @@ while True:
             a = input("Do you want to see the code behind that? (y/n) ").lower()
             if a == 'y':
                 print("def conditional_stat(val):\n\tage = val # gets the value from the def function \nif age >= 18: #checks if age is greater than or equal to 18 \n\tprint('You are an adult') # Prints if True \nelse: \n\tprint('You are still a minor') # Prints if false")
+                clear_sc('any_key')
+                show_menu()
                 continue
         elif user_choice1 == '3':
             print("You are directed to the main menu..")
@@ -322,6 +322,9 @@ for items in e_list:
                 print(code_list)
                 ex = input("Do you want to continue to other loops?--> (y/n)").lower()
                 if ex == 'y':
+                    clear_sc('any_key')
+                    show_menu()
+
                     continue
         
 
@@ -413,7 +416,7 @@ print(f"Final result: {result}")"""
                         clear_sc('any_key')
                         show_menu()
                         continue
-            elif user_choice3 == '4':
+        elif user_choice2 == '3':
                 print("You are directed to the main menu..")
                 clear_sc('any_key')
                 show_menu()
@@ -456,7 +459,7 @@ print(f"Final result: {result}")"""
             count += 1
 
         # Option to show code
-        show_code = input("\nPress any key to see the code behind this while loop (or just Enter to skip): ")
+        show_code = input("\nPress any key to proceed for further explanation (or just Enter to skip): ")
         if show_code != "":
             code_while = """count = 1
     while count <= 5:
@@ -488,7 +491,22 @@ print(f"Final result: {result}")"""
             if x == 5:
                 type_writer("Stopping the loop with 'break'")
                 break  # stop the loop completely
+            wh_code = """x = 0
+        while True:
+            x += 1
+            type_writer(f"\nNumber: {x}")
 
+            if x == 3:
+                type_writer("Skipping number 3 with 'continue'")
+                continue  # skip the rest of this loop iteration
+
+            type_writer(f"Processing number {x}")
+
+            if x == 5:
+                type_writer("Stopping the loop with 'break'")
+                break  # stop the loop completely
+            """
+            print(wh_code)
         type_writer("Press Enter if you want to try typing your own While loop code!")
         code_use = input()
 
@@ -882,7 +900,4 @@ SUMMARY
 
 
             
-
-
-
 
