@@ -55,7 +55,7 @@ def show_menu():
     print("6. Loops")
     print("7. While Loops")
     print("8. Lists and Dictionaries")
-    print("9. Python Fundamentals")
+    print("9. Def function and Code Executor")
     print("X. Exit System")
     print("+------------------------------------+")
 
@@ -882,5 +882,6 @@ SUMMARY
 
 
             
+
 
 
