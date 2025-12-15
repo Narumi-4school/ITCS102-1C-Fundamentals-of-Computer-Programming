@@ -45,8 +45,8 @@ def show_menu():
     print("+------------------------------------+")
     print("WELCOME TO My PYTHON COMPILER SYSTEM")
     print("+------------------------------------+")
-    name = input("What is your name? .....  ")
-    print("Hello", name, "Choose an action from 1 - 9 --> ")
+    name = input("What is your name? .....  ").upper()
+    print(f"Hello {name}, "Choose an action from 1 - 9: ")
     print("1. Print function")
     print("2. View python sequences")
     print("3. Arithmetic assignations and functions")
@@ -882,6 +882,7 @@ SUMMARY
 
 
             
+
 
 
 
